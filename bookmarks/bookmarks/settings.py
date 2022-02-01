@@ -127,3 +127,7 @@ LOGOUT_URL = 'logout'
 
 #ОТПРАВКА СООБЩЕНИЙ НА ПОЧТУ - В КОНСОЛЬ
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# ОТДАЧА ФАЙЛОВ
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
