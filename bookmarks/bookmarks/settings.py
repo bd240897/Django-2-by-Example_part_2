@@ -131,3 +131,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # ОТДАЧА ФАЙЛОВ
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# AUTHENTICATION
+AUTHENTICATION_BACKENDS = [
+    # стандратная по имени и паролю
+    'django.contrib.auth.backends.ModelBackend',
+    # своя по эмейлу
+    'account.authentication.EmailAuthBackend',
+    # джвнго проверяет их по порядку
+]
